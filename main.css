@@ -1,0 +1,32 @@
+
+body
+{
+	text-align: center;
+}
+
+.grid
+{
+	display: inline-block;
+	margin-top: 30px auto;
+}
+.square
+{
+	margin:1px 1px;
+	padding:0;
+	border:1px solid;
+	float: left;
+}
+
+.button
+{
+	width:100px;
+	height:30px;
+	line-height: 30px;
+	margin: 20px auto;
+	padding:10px;
+	display: inline-block;
+	background: rgba(124,123,233,.9);
+	text-decoration: none;
+	color:whitesmoke;
+}
+
