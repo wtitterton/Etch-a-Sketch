@@ -3,7 +3,7 @@ var gridSize = 512;		//in pixels, along one side
 var gridDims = 16;		//in divs
 var divSize = gridSize / gridDims;
 var grid = $('.grid');
-var elem;
+
 var mode = 'normal';
 
 /**************************************************
@@ -23,6 +23,11 @@ function createGrid(dims)
 		
 		$(grid).append($("<div></div>").css("clear", "both"));
 	}
+
+	$('.square').css({
+		'background': 'rgba(0,0,0,.9)',
+		'opacity': '1'
+	})
 }
 
 
@@ -47,6 +52,11 @@ function generateColor()
 {
 	var randomColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
 	return randomColor;
+}
+
+function controlBorder()
+{
+
 }
 
 
@@ -184,7 +194,30 @@ $('.trail').on('click',function(){
 $('.reset').on('click',function(){
 	mode = 'normal';
 	resetGrid();
+	if($('.checkbox').attr('checked', false))
+	{
+		$('.checkbox').prop('checked','checked');
+	};
 });
+
+$('.checkbox').change(function(){
+	if($(this).is(':checked'))
+	{
+		$('.square').css({
+			'border': '1px solid #000',
+			'margin': '1px 1px'
+		})
+
+		
+	}
+	else
+	{
+		$('.square').css({
+			'border': 'none',
+			'margin': '0'
+		})
+	}
+})
 
 
 /****************************

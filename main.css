@@ -30,3 +30,26 @@ body
 	color:whitesmoke;
 }
 
+.field
+{
+	border: 1px solid;
+	width:100px;
+	border-radius:5px 10px; 
+	margin: 5px auto;
+
+	
+}
+
+label
+{
+	font-size: 18px;
+	vertical-align: middle;
+}
+
+input
+{
+	vertical-align: middle;
+	width:18px;
+	height: 18px;
+}
+
